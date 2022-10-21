@@ -1,0 +1,38 @@
+﻿<Window x:Class="Calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculadora"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="300">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Height="27" Margin="-170,-420,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="101" FontFamily="Segoe UI" FontSize="18" Foreground="Gray"><Run Language="pt-br" Text="Calculadora"/></TextBlock>
+        <Rectangle HorizontalAlignment="Center" Height="2" Margin="0,42,0,0" Stroke="#FFCACACA" VerticalAlignment="Top" Width="300"/>
+        <Ellipse HorizontalAlignment="Left" Height="27" Margin="363,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="27"/>
+        <Ellipse HorizontalAlignment="Center" Height="27" Margin="255,-417,0,0" Stroke="#FF00A7FF" VerticalAlignment="Center" Width="27" RenderTransformOrigin="0.493,0.481"/>
+        <Ellipse HorizontalAlignment="Center" Height="27" Margin="190,-417,0,0" Stroke="Black" VerticalAlignment="Center" Width="27"/>
+        <Ellipse HorizontalAlignment="Center" Height="27" Margin="125,-417,0,0" Stroke="Black" VerticalAlignment="Center" Width="27"/>
+        <TextBlock x:Name="Visor" HorizontalAlignment="Center" Height="24" Margin="0,-340,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="280" LineStackingStrategy="MaxHeight" TextAlignment="Right" FontSize="18"/>
+        <TextBlock x:Name="Conta" HorizontalAlignment="Center" Height="37" Margin="0,-270,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="280" LineStackingStrategy="MaxHeight" TextAlignment="Right" FontSize="30"/>
+        <Button x:Name="btnCE" Content="CE" HorizontalAlignment="Center" Height="60" Margin="-194,-140,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontSize="22" Foreground="Black" BorderBrush="#FF009662" Background="#FFC3FFEA"/>
+        <Button x:Name="btn7" Content="7" HorizontalAlignment="Center" Height="60" Margin="-194,-10,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num7" FontSize="22" BorderBrush="#FF707070" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn4" Content="4" HorizontalAlignment="Center" Height="60" Margin="-194,120,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num4" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn1" Content="1" HorizontalAlignment="Center" Height="60" Margin="-194,250,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num1" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn0" Content="0" HorizontalAlignment="Center" Height="60" Margin="-60,380,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num0" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btnC" Content="C" HorizontalAlignment="Center" Height="60" Margin="-60,-140,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontSize="22" BorderBrush="#FF009662" Background="#FFC3FFEA"/>
+        <Button x:Name="btnApaga" Content="&lt;D" HorizontalAlignment="Center" Height="60" Margin="70,-140,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontSize="22" BorderBrush="#FF009662" Background="#FFC3FFEA"/>
+        <Button x:Name="btnDivisao" Content="÷" HorizontalAlignment="Center" Height="60" Margin="200,-140,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontSize="24" BorderBrush="#FF009662" Background="#FFC3FFEA" Click="btnDivisao_Click"/>
+        <Button x:Name="btn8" Content="8" HorizontalAlignment="Center" Height="60" Margin="-60,-10,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num8" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn5" Content="5" HorizontalAlignment="Center" Height="60" Margin="-60,120,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num5" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn2" Content="2" HorizontalAlignment="Center" Height="60" Margin="-60,250,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num2" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn9" Content="9" HorizontalAlignment="Center" Height="60" Margin="70,-10,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num9" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn6" Content="6" HorizontalAlignment="Center" Height="60" Margin="70,120,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num6" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btn3" Content="3" HorizontalAlignment="Center" Height="60" Margin="70,249,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" Click="Click_Num3" FontSize="22" Background="DodgerBlue" Foreground="White"/>
+        <Button x:Name="btnVezes" Content="x" HorizontalAlignment="Center" Height="60" Margin="200,-10,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontSize="24" FontFamily="Times New Roman" BorderBrush="#FF009662" Background="#FFC3FFEA" Click="btnVezes_Click"/>
+        <Button x:Name="btnMenos" Content="-" HorizontalAlignment="Center" Height="60" Margin="200,120,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontSize="24" FontFamily="Times New Roman" FontWeight="Bold" BorderBrush="#FF009662" Background="#FFC3FFEA" Click="btnMenos_Click"/>
+        <Button x:Name="btnMais" Content="+" HorizontalAlignment="Center" Height="60" Margin="200,248,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontFamily="Times New Roman" FontSize="24" FontWeight="Bold" BorderBrush="#FF009662" Background="#FFC3FFEA" Click="btnMais_Click"/>
+        <Button x:Name="btnVírgula" Content="," HorizontalAlignment="Center" Height="60" Margin="70,380,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontSize="22" Background="DodgerBlue" Foreground="White" Click="btnVírgula_Click"/>
+        <Button x:Name="btnIgual" Content="=" HorizontalAlignment="Center" Height="60" Margin="200,380,0,0" VerticalAlignment="Center" Width="60" FlowDirection="LeftToRight" FontFamily="Times New Roman" FontWeight="Bold" FontSize="24" BorderBrush="#FF009662" Background="#FFC3FFEA"/>
+    </Grid>
+</Window>
